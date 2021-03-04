@@ -111,3 +111,99 @@ vtotal = valorh - descuento
 print(f'El monto de descuento es: $ {descuento}')
 print(f'El monto total a pagar al trabajador es de: $ {vtotal}')
     
+# Punto 9: Un centro de comunicaciones alquilan tarjetas para realizar llamadas
+# y cobran el monto consumido de la tarjeta mas un recargo del 20%.
+# Teniendo como dato de entrada el monto inicial y el monto final de la
+# tarjeta, determine el costo de la llamada.
+
+monto_ini = float(input('Digite el monto inicial: $'))
+monto_fin = float(input('Digite el monto final: $'))
+consumo = monto_ini - monto_fin 
+recargo = consumo * 0.2
+totalp = consumo + recargo
+print(f'El consoto de la llamda es: $ {totalp}')
+
+# Punto 10: En una fototienda cobran por el revelado de un rollo $1.500 por cada
+# foto. Realice un programa en Java que determine el monto a pagar
+# por un revelado completo sabiendo que adiconalmente le cobran el
+# IVA (16%).
+
+cant_fotos = int(input('Digite la cantidad de fotos: '))
+vpagar = (1500 * cant_fotos)
+iva = vpagar * 0.16
+totalp = vpagar + iva
+print(f'El valor a pagar por las fotos es de: $ {totalp}') 
+
+# Punto 11: 
+v_presupuesto = float(input('Digite el valor total para el presupuesto: $'))
+ginecologia = v_presupuesto * 0.4
+traumatologia = v_presupuesto * 0.3
+pediatria = v_presupuesto * 0.3
+print(f'El monto designado para ginecología es de : $ {ginecologia}')
+print(f'El monto designado para traumatología es de : $ {traumatologia}')
+print(f'El monto designado para pediatría es de : $ {pediatria}')
+
+
+# Punto 12: Una video tienda alquila DVD a $1.500 el día. Tiene una promoción
+# que consiste en dejar gratis el alquiler de una película. Realice un
+# programa en Java que teniendo como dato de entrada el total de
+# películas alquiladas, y el número de días de alquiler, determine el
+# monto a pagar. 
+    
+num_dvd = int(input('Digite la cantidad de DVDs que se alquilaran: '))
+num_dias = int(input('Digite el número de días de alquiler: '))
+v_alquiler = num_dvd * 1500
+totalp = v_alquiler * num_dias
+promocion = totalp - 1500
+print(f'El valor a pgar es de: $ {promocion}')
+
+# Punto 13: Una Agencia de viajes cobra por un Tour a Cartagena $25.000
+# diarios por persona. Realice un programa en Java que determine el
+# monto a pagar por una familia que desee realizar dicho Tour
+# sabiendo que también cobran el 12% de IVA.
+
+num_per = int(input('Digite la cantidad de personas: '))
+num_dias = int(input('Digite el número de días: '))
+v_tour = num_per * 25000
+totalp = v_tour * num_dias
+iva = totalp * 0.12
+total = totalp + iva
+print(f'El valor a pgar por familia es de: $ {total}')
+
+# Punto 14: Un Hotel 5 Estrellas de Santa Marta tiene una promoción para sus
+# clientes. Cobra por una habitación $100.000 el primer día y por el
+# resto $200.000 por día. Realice un programa en Java que determine
+# el valor total a pagar por la habitación si la estadía fue de varios
+# días.
+
+num_dias = int(input('Digite la cantidad de días: '))
+if num_dias > 1:
+    estadia = (num_dias * 200000) - 100000
+    print(f'El valor a pagar es de: $ {estadia}')
+else:
+    estadia = 100000
+    print(f'El valor a pagar es de: $ {estadia}')    
+    
+# Punto 14: El banco del Pueblo da microcréditos a empresarios para ser
+# cancelados en un lapso de 2 años (24 meses). Al monto del
+# préstamo se le cobra un interés del 24%. El empresario debe pagar
+# la mitad del préstamo en 4 cuotas especiales y la otra mitad en 20
+# cuotas ordinarias. Realice un algoritmo que teniendo como dato de
+# entrada el monto del préstamo, determine el monto total a pagar por
+# el préstamo, el monto de las cuotas especiales y el monto de las
+# cuotas ordinarias.    
+
+monto = float(input('Digite el monto prestado: $ '))
+interes = (monto * 0.24)
+prestamo = interes + monto
+mitad_uno = prestamo / 2
+mitad_dos = prestamo / 2
+m_prestamo = mitad_uno /4
+o_prestamo = mitad_dos / 20
+print(f'El monto total a pagar por el prestamo es de: $ {prestamo}') 
+print(f'El valor de la cuotas especiales es de: $ {m_prestamo}') 
+print(f'El valor de la cuotas ordinaria es de: $ {o_prestamo}') 
+
+
+    
+
